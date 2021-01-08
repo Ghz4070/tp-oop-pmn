@@ -5,7 +5,8 @@ namespace App\Controllers;
 
 use App\Interfaces\StudentInterface;
 
-class ClassementController
+final class ClassementController
+
 {
     private $students = [];
 
@@ -18,8 +19,8 @@ class ClassementController
     {
         echo "Voici le classement de la classe METTRE_LA_CLASSE_METHOD<br>\n";
 
-        foreach($this->students as $student) {
-            echo get_class($student).' : '.$student->student()."<br>\n";
+        foreach ($this->students as $student) {
+            echo get_class($student) . ' : ' . $student->student() . "<br>\n";
         }
     }
 }

@@ -10,9 +10,11 @@ abstract class AbstractStudent implements StudentInterface
     protected $age;
     protected $lastname;
     protected $firstname;
+    protected $average;
 
     public function __construct(int $age, string $firstname, string $lastname)
     {
+        $this->average = rand(40, 500);
         $this->age = $age;
         $this->firstname = $firstname;
         $this->lastname = $lastname;
@@ -32,4 +34,10 @@ abstract class AbstractStudent implements StudentInterface
     {
         return $this->age;
     }
+
+    public function studentAverage(): float
+    {
+        return $this->average;
+    }
+
 }

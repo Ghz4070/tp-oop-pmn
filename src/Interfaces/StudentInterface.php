@@ -10,4 +10,6 @@ interface StudentInterface
     public function studentLastname(): string;
 
     public function studentAge(): int;
+
+    public function studentAverage(): float;
 }
