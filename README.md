@@ -7,15 +7,15 @@
 - Mettre des notes aléatoires pour un cours pour chaque élève
 
 # Règles :
-- Utiliser des namespaces
-- Utiliser de l'autoload de composer
-- Utiliser de la programmation orientée objet (donc faire des classes)
-- Utiliser des interfaces
-- Bien penser à exécuter phpcs-fixer pour respecter le coding style
-- Ne pas utiliser de else
-- Injecter les dépendances
-- Utiliser de l'héritage
-- Utiliser le Type hinting et return type (utilisez le declare strict type)
+- Utiliser des namespaces - valide
+- Utiliser de l'autoload de composer - valide
+- Utiliser de la programmation orientée objet (donc faire des classes) - valide
+- Utiliser des interfaces - valide
+- Bien penser à exécuter phpcs-fixer pour respecter le coding style - a faire 
+- Ne pas utiliser de else - valide
+- Injecter les dépendances - a faire 
+- Utiliser de l'héritage - valide 
+- Utiliser le Type hinting et return type (utilisez le declare strict type) - valide
 
 # Git
 - Créer un repository sur Git
