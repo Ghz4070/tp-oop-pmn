@@ -3,41 +3,33 @@ declare(strict_types=1);
 
 namespace App\Controllers\AbstractControllers;
 
+use App\Config\Content;
+use App\Interfaces\AverageInterface;
 use App\Interfaces\StudentInterface;
 
-abstract class AbstractStudent implements StudentInterface
+abstract class AbstractStudent implements AverageInterface, StudentInterface
 {
-    protected $age;
-    protected $lastname;
-    protected $firstname;
-    protected $average;
+    protected $students;
 
-    public function __construct(int $age, string $firstname, string $lastname)
+    public function __construct()
     {
-        $this->average = rand(40, 500);
-        $this->age = $age;
-        $this->firstname = $firstname;
-        $this->lastname = $lastname;
+        $this->students = new Content();
     }
 
-    public function studentLastname(): string
+    public function averageStudent(): float
     {
-        return $this->lastname;
+        return round(rand(0, 200) / 10, 2);
     }
 
-    public function studentFirstname(): string
+    public function numberOfStudents(): int
     {
-        return $this->firstname;
+        return count($this->students->studentsArray());
     }
 
-    public function studentAge(): int
+    public function students(): array
     {
-        return $this->age;
+        return $this->students->studentsArray();
     }
 
-    public function studentAverage(): float
-    {
-        return $this->average;
-    }
-
+    abstract public function classement();
 }
