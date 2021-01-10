@@ -25,11 +25,4 @@
 Je regarderai semaine prochaine, donc vous avez jusqu'à dimanche soir 23h59
 
 # CLI
-- Rendez-vous sur http://localhost:8080
-```$ docker-composer up -d```
-
-- Installer les dependances
-```$ docker-compose run composer install```
-
-- Actualiser l'autoload
-```$ docker-compose run composer dump-autoload -o```
+- Check all commands line with ````$ make```` 
