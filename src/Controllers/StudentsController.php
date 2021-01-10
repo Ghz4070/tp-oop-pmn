@@ -3,17 +3,24 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-final class StudentsController
+use App\Interfaces\StudentsInterface;
+
+final class StudentsController implements StudentsInterface
 {
     public $students;
 
-    public function __construct()
+    public function __construct(array $students)
     {
-        $this->students = ["Ilies", "Etienne", "Arthur", "Tarshini", "Mehdi", "Thomas", "Guillaume"];
+        $this->students = $students;
     }
 
-    public function studentsArray(): array
+    public function students(): array
     {
         return $this->students;
+    }
+
+    public function numberOfStudents(): int
+    {
+        return count($this->students());
     }
 }

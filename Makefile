@@ -20,7 +20,6 @@ start:	## Lancer le container docker (PORT=[customPort])
 	$(DOCKER_RUN) -v $(PWD):/var/www/html --rm -p $(PORT):80 php:apache
 
 ## —— Composer ———————————————————————————————————————————————————————————————
-
 install: ## Installer les dependances
 	echo "$(OK_COLOR)Install dependances ...$(NO_COLOR)"
 	$(DOCKER_RUN) --rm $(VOLUME) composer install
@@ -30,8 +29,7 @@ reload: ## Actualiser l'autoload
 	$(DOCKER_RUN) --rm $(VOLUME) composer dump-autoload -o
 
 ## —— Php cs fixer ———————————————————————————————————————————————————————————————
-
-cs: ## Formatage du php cs fixer
+cs: ## Formatage du code avec php cs fixer
 	echo "$(OK_COLOR)Fixing ...$(NO_COLOR)"
 	$(DOCKER_RUN) $(VOLUME) phpqa/php-cs-fixer fix src
 

@@ -5,6 +5,18 @@ require __DIR__ . '/vendor/autoload.php';
 
 use App\Controllers\SessionController;
 
-$displayClass = new SessionController('DVO21.1');
+$students = [
+    "Ilies",
+    "Tarshini",
+    "Mehdi",
+    "Thomas",
+    "Guillaume",
+    "Maxime",
+    "Rubens",
+    "Ahmed",
+];
+
+$displayClass = new SessionController('DVO21.1', $students);
+
 $displayClass->displaySession();
 $displayClass->classement();
