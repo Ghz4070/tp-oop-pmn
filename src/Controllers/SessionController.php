@@ -5,7 +5,7 @@ namespace App\Controllers;
 
 use App\Controllers\AbstractControllers\AbstractStudent;
 
-final class SessionController extends AbstractStudent
+class SessionController extends AbstractStudent
 {
     public $name;
 
@@ -17,20 +17,25 @@ final class SessionController extends AbstractStudent
 
     public function displaySession()
     {
-        printf("session en cours : %s Il y a %d eleves <br><br>\n",
-            $this->name, $this->numberOfStudents());
+        printf(
+            "session en cours : %s Il y a %d eleves <br><br>\n",
+            $this->name,
+            $this->numberOfStudents()
+        );
     }
 
     public function classement()
     {
         $average = array();
+        $increment = 1;
+
         for ($i = 0; $i < $this->numberOfStudents(); $i++) {
             $average += array($this->students()[$i] => $this->averageStudent());
         }
         asort($average);
 
         foreach ($average as $name => $avg) {
-            printf("%s a %.1f de moyenne <br>\n", $name, $avg);
+            printf("%d - %s a %.1f de moyenne <br>\n", $increment++, $name, $avg);
         }
     }
 }
