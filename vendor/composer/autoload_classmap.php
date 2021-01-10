@@ -6,4 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Controllers\\AbstractControllers\\AbstractStudent' => $baseDir . '/src/Controllers/AbstractControllers/AbstractStudent.php',
+    'App\\Controllers\\SessionController' => $baseDir . '/src/Controllers/SessionController.php',
+    'App\\Controllers\\StudentsController' => $baseDir . '/src/Controllers/StudentsController.php',
+    'App\\Interfaces\\AverageInterface' => $baseDir . '/src/Interfaces/AverageInterface.php',
+    'App\\Interfaces\\StudentInterface' => $baseDir . '/src/Interfaces/StudentInterface.php',
+    'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App\Controllers\AbstractControllers;
 
-use App\Config\Content;
+use App\Controllers\StudentsController;
 use App\Interfaces\AverageInterface;
 use App\Interfaces\StudentInterface;
 
@@ -13,7 +13,7 @@ abstract class AbstractStudent implements AverageInterface, StudentInterface
 
     public function __construct()
     {
-        $this->students = new Content();
+        $this->students = new StudentsController();
     }
 
     public function averageStudent(): float

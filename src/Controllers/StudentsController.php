@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Config;
+namespace App\Controllers;
 
-class Content
+final class StudentsController
 {
     public $students;
 
