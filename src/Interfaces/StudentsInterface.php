@@ -5,7 +5,7 @@ namespace App\Interfaces;
 
 interface StudentsInterface
 {
-    public function students(): array;
+    public function students(int $value): array;
 
-    public function numberOfStudents(): int;
+    public function numberOfStudents(int $value): int;
 }

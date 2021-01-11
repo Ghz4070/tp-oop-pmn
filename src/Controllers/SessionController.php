@@ -4,12 +4,14 @@ declare(strict_types=1);
 namespace App\Controllers;
 
 use App\Controllers\AbstractControllers\AbstractSession;
+use App\Interfaces\StudentsInterface;
 
 class SessionController extends AbstractSession
 {
     public $name;
+    public $students;
 
-    public function __construct(string $name, array $students)
+    public function __construct(string $name, StudentsInterface $students)
     {
         parent::__construct($students);
         $this->name = $name;
@@ -20,7 +22,7 @@ class SessionController extends AbstractSession
         printf(
             "session en cours : %s Il y a %d eleves <br><br>\n",
             $this->name,
-            $this->students->numberOfStudents()
+            $this->students->numberOfStudents((int)$_GET['class'])
         );
     }
 
@@ -29,8 +31,8 @@ class SessionController extends AbstractSession
         $average = array();
         $increment = 1;
 
-        for ($incr = 0; $incr < $this->students->numberOfStudents(); $incr++) {
-            $average += array($this->students->students()[$incr] => $this->averageStudent());
+        for ($incr = 0; $incr < $this->students->numberOfStudents((int)$_GET['class']); $incr++) {
+            $average += array($this->students->students((int)$_GET['class'])[$incr] => $this->averageStudent());
         }
         asort($average);
 

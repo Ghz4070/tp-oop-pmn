@@ -26,3 +26,5 @@ Je regarderai semaine prochaine, donc vous avez jusqu'à dimanche soir 23h59
 
 # CLI
 - Check all commands line with ````$ make```` 
+
+# http://localhost:8080/?class=1 ou class=0 ppour afficher les differentes classe

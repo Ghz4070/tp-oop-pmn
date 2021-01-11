@@ -21,11 +21,13 @@ class ComposerStaticInit68513475cf26b649298d32c4204116d5
     );
 
     public static $classMap = array (
-        'App\\Controllers\\AbstractControllers\\AbstractStudent' => __DIR__ . '/../..' . '/src/Controllers/AbstractControllers/AbstractStudent.php',
+        'App\\Controllers\\AbstractControllers\\AbstractSession' => __DIR__ . '/../..' . '/src/Controllers/AbstractControllers/AbstractSession.php',
         'App\\Controllers\\SessionController' => __DIR__ . '/../..' . '/src/Controllers/SessionController.php',
-        'App\\Controllers\\StudentsController' => __DIR__ . '/../..' . '/src/Controllers/StudentsController.php',
         'App\\Interfaces\\AverageInterface' => __DIR__ . '/../..' . '/src/Interfaces/AverageInterface.php',
-        'App\\Interfaces\\StudentInterface' => __DIR__ . '/../..' . '/src/Interfaces/StudentInterface.php',
+        'App\\Interfaces\\ClassementInterface' => __DIR__ . '/../..' . '/src/Interfaces/ClassementInterface.php',
+        'App\\Interfaces\\StudentsInterface' => __DIR__ . '/../..' . '/src/Interfaces/StudentsInterface.php',
+        'App\\Repository\\NullStudentsRepository' => __DIR__ . '/../..' . '/src/Repository/NullStudentsRepository.php',
+        'App\\Repository\\StudentsRepository' => __DIR__ . '/../..' . '/src/Repository/StudentsRepository.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 

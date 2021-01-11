@@ -3,20 +3,14 @@ declare(strict_types=1);
 
 require __DIR__ . '/vendor/autoload.php';
 
+$container = require __DIR__ . '/src/Config/di.global.php';
+
 use App\Controllers\SessionController;
 
-$students = [
-    "Ilies",
-    "Tarshini",
-    "Mehdi",
-    "Thomas",
-    "Guillaume",
-    "Maxime",
-    "Rubens",
-    "Ahmed",
-];
 
-$displayClass = new SessionController('DVO21.1', $students);
+$displayClass = $container[SessionController::class]($container);
 
-$displayClass->displaySession();
-$displayClass->classement();
+$displayClass->displaySession((int)$_GET['class']);
+$displayClass->classement((int)$_GET['class']);
+
+echo '<br>';
