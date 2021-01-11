@@ -2,7 +2,7 @@
 
 # Créer une application d'école
 - Définir une session de classe
-- Remplir avec des élèves et leur information
+- Remplir avec des élèves et leur information,
 - Sortir un classement pour le passage de l'une épreuve
 - Mettre des notes aléatoires pour un cours pour chaque élève
 
